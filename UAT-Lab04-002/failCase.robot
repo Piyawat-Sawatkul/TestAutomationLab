@@ -71,6 +71,22 @@ Empty Email
     page should contain   Please enter your email!!
     close browser
 
+Open Workshop Registration Page Empty Phone Number
+    Open Browser    ${REGISTRATION URL}    ${BROWSER}
+    Set Selenium Speed    ${DELAY}
+
+Empty Phone Number
+    input text   id=firstname    Somyod
+    input text   id=lastname    Sodsai
+    input text   id=organization    CS KKU
+    input text   id=email    somyod@kkumail.com
+    click button    id=registerButton
+
+    location should contain    ${REGISTRATION URL}
+    page should contain   Please enter your phone number!!
+    close browser
+
+
 Open Workshop Registration Page Invalid Phone Number
     Open Browser    ${REGISTRATION URL}    ${BROWSER}
     Set Selenium Speed    ${DELAY}
